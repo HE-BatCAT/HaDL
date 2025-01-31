@@ -65,17 +65,6 @@ class LowRank(nn.Module):
         ...
 ```
 
-### Discrete Cosine Transform
-```python
-class DiscreteCosineTransform(Function):
-    """
-    Differentiable Discrete Cosine Transform (DCT) and its inverse.
-    """
-    @staticmethod
-    def forward(ctx, input):
-        ...
-```
-
 ## Configuration Options
 | Parameter       | Description                                    | Default |
 |---------------|--------------------------------|---------|
