@@ -10,6 +10,8 @@ HADL (Haar-DCT Low-Rank) is a neural network framework designed for forecasting 
 - **Configurable Components**: Enables or disables Haar and DCT transformations based on user preferences.
 - **Per-Feature or Generalized Layers**: Allows for independent layers per feature or a shared low-rank layer across all features.
 
+**Note**: The model can perform multivariate to multivariate and univariate to univariate only, i.e. number of output and input channels needs to be same.
+
 ## Installation
 To use HADL, ensure you have the required dependencies installed:
 ```bash
