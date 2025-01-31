@@ -204,7 +204,8 @@ class HADL(nn.Module):
             # If `individual` is True, process each feature separately
             out = torch.empty(batch_size, self.features, self.pred_len, device=x.device)
             for i in range(self.features):
-                out[:, i, :] = self.layers[i](x[:, i, :].view(batch_size, 1, -1))
+                pred = self.layers[i](x[:, i, :].view(batch_size, 1, -1))
+                out[:, i, :] = pred.view(batch_size, -1)
         else:
             # Use shared low-rank layer
             out = self.layer(x)
